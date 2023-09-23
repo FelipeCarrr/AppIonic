@@ -1,0 +1,53 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Lugares De Interes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-accordion-group>
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Alcaldia</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Sec. General</div>
+        <div class="ion-padding" slot="content">Sec. Educación</div>
+        <div class="ion-padding" slot="content">Sec. Transito</div>
+        <div class="ion-padding" slot="content">Sec. Gobierno</div>
+        <div class="ion-padding" slot="content">Sec. Planeación</div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="light">
+          <ion-label>Cámara de Comercio</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Gerencia</div>
+      </ion-accordion>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-label>Policía</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content"></div>
+      </ion-accordion>
+      <ion-accordion value="four">
+        <ion-item slot="header" color="light">
+          <ion-label>Bomberos</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content"></div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+      <ion-badge slot="end" color="danger"><ion-icon name="notifications-outline"></ion-icon>1000</ion-badge>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+  <ion-tabs>
+  </ion-tabs>
+</div>

@@ -1,17 +1,43 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 3
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content>
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title class="ion-text-center">
+        Hoteles
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+
+  <ion-content>
+    <ion-list>
+      <ng-container *ngFor="let hotel of hoteles">
+        <ion-item (click)="toggleList(hotel)">
+          <ion-label>{{ hotel.nombre }}</ion-label>
+          <ion-icon [name]="hotel.abierto ? 'chevron-up' : 'chevron-down'" slot="end"></ion-icon>
+        </ion-item>
+        <ion-card *ngIf="hotel.abierto">
+          <ion-card-content>
+            <div class="image-carousel">
+              <div class="carousel-slide" *ngFor="let imagen of hotel.imagenes">
+                <img [src]="imagen" alt="Imagen del hotel">
+              </div>
+            </div>
+            {{ hotel.descripcion }}
+          </ion-card-content>
+        </ion-card>
+      </ng-container>
+    </ion-list>
+  </ion-content>
+  
+  
+  
+  
+
+  

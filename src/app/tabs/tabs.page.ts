@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  accordionOpen = false;
 
+  toggleAccordion() {
+    this.accordionOpen = !this.accordionOpen;
+  }
 }
