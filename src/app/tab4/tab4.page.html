@@ -13,19 +13,6 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <ion-list>
-    <ion-item (click)="toggleCard('first')" color="black">
-      <ion-label>Droguería XXXXXX</ion-label>
-    </ion-item>
-    <ion-card *ngIf="isCardOpen('first')">
-      <ion-card-content>
-        <p><strong>Dirección:</strong> Calle Principal #123</p>
-        <p><strong>Teléfono de Contacto:</strong> (123) 456-7890</p>
-        <p><strong>Horario de Atención:</strong> Lunes a Viernes: 9:00 AM - 5:00 PM</p>
-      </ion-card-content>
-    </ion-card>
-  </ion-list>
   <ion-list>
     <ion-item (click)="toggleCard('second')" color="black">
       <ion-label>Droguería J & A</ion-label>

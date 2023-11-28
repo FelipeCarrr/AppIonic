@@ -4,20 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MapaPageRoutingModule } from './mapa-routing.module';
+import { ModalImagePageRoutingModule } from './modal-image-routing.module';
 
-import { MapaPage } from './mapa.page';
-
-
+import { ModalImagePage } from './modal-image.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MapaPageRoutingModule,
-    
+    ModalImagePageRoutingModule
   ],
-  declarations: [MapaPage]
+  declarations: [ModalImagePage]
 })
-export class MapaPageModule {}
+export class ModalImagePageModule {}

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -8,8 +10,14 @@ import { AppComponent } from '../app.component';
 })
 export class HomeComponent  implements OnInit {
   
-  constructor() { }
+  constructor(private router: Router) {}
+
 
   ngOnInit() {}
+
+  navigateToTab(tabName: string) {
+    this.router.navigate([`/tabs/${tabName}`]);
+  }
+  
 
 }

@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MapaPage } from './mapa.page';
+import { ModalImagePage } from './modal-image.page';
 
-describe('MapaPage', () => {
-  let component: MapaPage;
-  let fixture: ComponentFixture<MapaPage>;
+describe('ModalImagePage', () => {
+  let component: ModalImagePage;
+  let fixture: ComponentFixture<ModalImagePage>;
 
   beforeEach(async(() => {
-    fixture = TestBed.createComponent(MapaPage);
+    fixture = TestBed.createComponent(ModalImagePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

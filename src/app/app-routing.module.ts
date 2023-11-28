@@ -11,8 +11,8 @@ const routes: Routes = [
     loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
   },
   {
-    path: 'mapa',
-    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+    path: 'modal-image',
+    loadChildren: () => import('./modal-image/modal-image.module').then( m => m.ModalImagePageModule)
   }
 ];
 @NgModule({

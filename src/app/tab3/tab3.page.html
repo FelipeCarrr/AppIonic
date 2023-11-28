@@ -23,14 +23,13 @@
           <ion-icon [name]="hotel.abierto ? 'chevron-up' : 'chevron-down'" slot="end"></ion-icon>
         </ion-item>
         <ion-card *ngIf="hotel.abierto">
-          <ion-card-content>
-            <div class="image-carousel">
-              <div class="carousel-slide" *ngFor="let imagen of hotel.imagenes">
-                <img [src]="imagen" alt="Imagen del hotel">
-              </div>
+          <div class="image-carousel">
+            <div class="carousel-slide" *ngFor="let imagen of hotel.imagenes">
+              <img [src]="imagen" alt="Imagen del hotel">
             </div>
-            {{ hotel.descripcion }}
-          </ion-card-content>
+          </div>
+          <ion-card-content [innerHTML]="hotel.descripcion"></ion-card-content>
+          <ion-button (click)="verEnMapa(hotel)">Ver en el Mapa</ion-button>
         </ion-card>
       </ng-container>
     </ion-list>

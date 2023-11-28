@@ -1,24 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Turismo
+      Lista de Lugares Turísticos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let sitio of sitiosTurismo">
-      <ion-card>
-        <ion-img [src]="sitio.foto"></ion-img>
-        <ion-card-header>
-          {{ sitio.nombre }}
-        </ion-card-header>
-        <ion-card-content>
-          {{ sitio.descripcion }}
-        </ion-card-content>
-        <ion-button expand="full" (click)="mostrarMapa(sitio)">Ver en el mapa</ion-button>
-      </ion-card>
+    <ion-item *ngFor="let lugar of lugares">
+      <ion-thumbnail slot="start">
+        <img [src]="lugar.imagen" alt="Imagen del lugar">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ lugar.nombre }}</h2>
+        <p>{{ lugar.descripcion }}</p>
+      </ion-label>
+      <ion-button (click)="verEnMapa(lugar)">Ver en el Mapa</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>
